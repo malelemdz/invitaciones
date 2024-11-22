@@ -15,15 +15,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #5d4037;
+    background-color: #fff3e0;
 }
 
 .header {
     text-align: center;
     padding: 2rem;
     background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                url('https://images.pexels.com/photos/38999/the-dew-the-priest-christening-38999.jpeg');
+                url('https://images.pexels.com/photos/12051688/pexels-photo-12051688.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -42,29 +42,31 @@ body {
 .invitation-text h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
-    color: #2c3e50;
+    color: #8d6e63;
     margin-bottom: 1rem;
 }
 
 .invitation-text .baby-name {
     font-family: 'Great Vibes', cursive;
     font-size: 1.7rem;
-    color: #2c3e50;
+    color: #8d6e63;
     margin-bottom: 1rem;
 }
 
 .invitation-text p {
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: #34495e;
+    line-height: 2.2; /* Increased line height */
+    color: #795548;
+    margin-bottom: 1rem; /* Added margin for better spacing */
 }
 
 .parents-names {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c3e50;
-    margin: 1rem 0;
+    color: #8d6e63;
+    margin: 1.5rem 0; /* Increased margin */
+    line-height: 2; /* Added line height */
 }
 
 .baby-photo {
@@ -80,12 +82,12 @@ body {
 h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
-    color: #2c3e50;
+    color: #8d6e63;
     margin: 1rem 0;
 }
 
 .countdown {
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    background: linear-gradient(145deg, #ffffff, #fff3e0);
     padding: 2rem;
     border-radius: 15px;
     margin: 2rem auto;
@@ -104,8 +106,8 @@ h1 {
     background: white;
     padding: 1rem;
     border-radius: 10px;
-    width: 120px; /* Fixed width for all items */
-    height: 120px; /* Fixed height for all items */
+    width: 120px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +118,7 @@ h1 {
 .countdown-number {
     font-size: 2rem;
     font-weight: 600;
-    color: #3498db;
+    color: #8d6e63; /* Changed from orange to warm brown */
     margin-bottom: 0.5rem;
 }
 
@@ -124,7 +126,7 @@ h1 {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #7f8c8d;
+    color: #8d6e63;
 }
 
 .locations {
@@ -144,6 +146,11 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.location-card p {
+    line-height: 2; /* Added line height */
+    margin-bottom: 0.8rem; /* Added margin */
+}
+
 .location-img {
     width: 100%;
     height: 200px;
@@ -155,7 +162,7 @@ h1 {
 .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #3498db;
+    background-color: #8d6e63; /* Changed from orange to warm brown */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -164,7 +171,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: #6d4c41; /* Changed from orange to darker brown */
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -179,10 +186,15 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.whatsapp-section p {
+    line-height: 2.2; /* Increased line height */
+    margin-bottom: 1.5rem; /* Added margin */
+}
+
 .quote {
     font-family: 'Great Vibes', cursive;
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #8d6e63;
     text-align: center;
     padding: 2rem;
 }
@@ -190,7 +202,7 @@ h1 {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #2c3e50;
+    background-color: #795548;
     color: #fff;
     font-size: 0.8rem;
 }
@@ -211,7 +223,7 @@ footer {
     }
 
     .countdown-item {
-        width: 100px; /* Slightly smaller but still uniform on mobile */
+        width: 100px;
         height: 100px;
         min-width: unset;
     }

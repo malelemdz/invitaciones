@@ -1,0 +1,335 @@
+<html><head><base href="https://malelemdz.test">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bautizo de Santiago</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                url('https://images.pexels.com/photos/38999/the-dew-the-priest-christening-38999.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.invitation-text {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.invitation-text h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.invitation-text .baby-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.7rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.invitation-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.parents-names {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.baby-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.countdown {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.countdown-items {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.countdown-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 120px; /* Fixed width for all items */
+    height: 120px; /* Fixed height for all items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.countdown-number {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7f8c8d;
+}
+
+.locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.location-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.whatsapp-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quote {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-items {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .countdown-item {
+        width: 100px; /* Slightly smaller but still uniform on mobile */
+        height: 100px;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-items {
+        gap: 0.8rem;
+    }
+
+    .countdown-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.7rem;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <img src="https://images.pexels.com/photos/4409299/pexels-photo-4409299.jpeg" alt="Bebé sonriente en traje de bautizo" class="baby-photo">
+    <h1>Bautizo de Santiago</h1>
+    <p>30 de Marzo, 2025</p>
+    <div class="countdown">
+        <h3>Nos vemos en:</h3>
+        <div class="countdown-items" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Días</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Horas</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutos</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Segundos</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="invitation-text">
+    <h2>Con gran alegría...</h2>
+    <p>Nosotros,</p>
+    <p class="parents-names">Carlos Rodríguez y María Mendoza</p>
+    <p>Tenemos el honor de invitarte a ser parte de uno de los momentos más especiales en la vida de nuestro amado hijo</p>
+    <h2 class="baby-name">Santiago Alejandro Rodríguez Mendoza</h2>
+    <p>quien recibirá el Sacramento del Bautismo, iniciando así su camino en la fe cristiana.</p>
+</div>
+
+<div class="locations">
+    <div class="location-card">
+        <img src="https://images.pexels.com/photos/15045329/pexels-photo-15045329/free-photo-of-edificio-dentro-iglesia-religion.jpeg" alt="Iglesia de Fátima" class="location-img">
+        <h3>Ceremonia Religiosa - 9:00 AM</h3>
+        <p>Iglesia de Fátima</p>
+        <p>Av. Principal #123, Col. Centro</p>
+        <a href="https://maps.google.com/?q=19.4326,-99.1332" class="btn" target="_blank">Ver Ubicación</a>
+    </div>
+
+    <div class="location-card">
+        <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg" alt="Salón de eventos Hotel Regina" class="location-img">
+        <h3>Recepción - 12:00 PM</h3>
+        <p>Salón de Eventos Hotel Regina</p>
+        <p>Blvd. Principal #456, Col. Jardines</p>
+        <a href="https://maps.google.com/?q=19.4326,-99.1334" class="btn" target="_blank">Ver Ubicación</a>
+    </div>
+</div>
+
+<div class="whatsapp-section">
+    <h2>Confirma tu Asistencia</h2>
+    <p>Este es un día muy especial para nuestra familia y queremos compartirlo contigo.</p>
+    <a href="https://wa.me/59162643571?text=Hola,%20quiero%20una%20invitación%20digital%20para%20bautizo" class="btn" target="_blank">Confirmar por WhatsApp</a>
+</div>
+
+<div class="quote">
+    "El bautismo es el principio de una nueva vida en Cristo"
+</div>
+
+<footer>
+    &copy; 2024 Malelemdz - Todos los derechos reservados
+</footer>
+
+<script>
+function updateCountdown() {
+    const bautizDate = new Date('March 30, 2025 09:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = bautizDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById('countdown').innerHTML = "<h2>¡El gran día ha llegado!</h2>";
+    }
+}
+
+const x = setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body></html>

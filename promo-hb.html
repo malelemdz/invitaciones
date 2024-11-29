@@ -23,7 +23,7 @@ body {
                 url('https://images.pexels.com/photos/7972727/pexels-photo-7972727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +49,34 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-h3 {
-    font-family: 'Dancing Script', cursive;  
+section h2 {
+    font-family: 'Dancing Script', cursive;
     margin-bottom: 20px;
     color: #141A40;
-    font-size: 1.5em;
+    font-size: 2em;
+}
+
+.program h2, .teachers h2, .gallery h2 {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    color: #141A40;
+    font-size: 2em;
+}
+
+.location h2 {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    color: #141A40;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Lexend', sans-serif;  
+    margin-top: 10px; /* Updated margin-top */
+    margin-bottom: 0; /* Ensure no bottom margin */
+    color: #141A40;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 p {
@@ -70,10 +93,14 @@ p {
     gap: 20px;
     margin-top: 30px;
     justify-content: center;
+    flex-wrap: nowrap;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .countdown-item {
-    background: #F2F2DF; /* Changed from rgba(20, 26, 64, 0.2) to solid light color */
+    background: #F2F2DF;
     padding: 15px;
     border-radius: 10px;
     width: 100px;
@@ -87,14 +114,14 @@ p {
 .countdown-item div {
     font-size: 1.5em;
     font-weight: bold;
-    font-family: 'Dancing Script', cursive;
-    color: #141A40; /* Added blue color for numbers */
+    font-family: 'Lexend', sans-serif;  
+    color: #141A40;
 }
 
 .countdown-item small {
     margin-top: 5px;
     font-family: 'Lexend', sans-serif;  
-    color: #141A40; /* Added blue color for text */
+    color: #141A40;
 }
 
 .music-btn {
@@ -177,14 +204,15 @@ section {
 
 .location button {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+    margin: 30px auto; /* Increased top/bottom margin from 20px to 30px */
+    padding: 15px 30px; /* Increased padding from 10px 20px to 15px 30px */
     font-family: 'Lexend', sans-serif;  
     background: #141A40;
     color: #F2F2DF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1em; /* Added font-size to make text larger */
 }
 
 .students {
@@ -202,28 +230,16 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
-}
-
-.student-card:hover {
-    transform: translateY(-5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .student-card img {
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
-    display: block;
+    width: 220px; 
+    height: 220px;
     border-radius: 8px;
     object-fit: cover;
-}
-
-.student-card h3,
-.teacher-grid h3 {
-    padding: 10px 5px 5px 5px;
-    margin-bottom: 5px;
-    font-family: 'Lexend', sans-serif;  
-    color: #141A40;
-    font-size: 1.2em;
 }
 
 .teacher-grid {
@@ -240,23 +256,22 @@ section {
 }
 
 .teacher-grid div {
-    background: #fff;
+    width: 250px;
     padding: 15px;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
-}
-
-.teacher-grid div:hover {
-    transform: translateY(-5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .teacher-grid img {
-    width: 100%;
-    height: 250px;
+    width: 220px; 
+    height: 220px;
     border-radius: 8px;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
 .teacher-grid p {
@@ -296,63 +311,61 @@ section {
 
 footer {
     background: #141A40;
-    color: #F2C063; 
-    padding: 20px;
+    color: #F2C063;
+    padding: 10px;
+    text-align: center; /* Add this line */
+}
+
+footer p {
+    color: #F2F2DF;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin: 5px auto; /* Change from margin: 5px 0 to margin: 5px auto */
+    text-align: center; /* Add this line */
+}
+
+footer a {
+    color: #F2C063;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center; /* Add this line */
 }
 
 @media (max-width: 768px) {
+    .header {
+        background-attachment: scroll;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    .student-card {
+        width: 320px;
+    }
+    
+    .student-card img {
+        width: 290px;
+        height: 290px;
+    }
+    
+    .teacher-grid div {
+        width: 320px;
+    }
+    
+    .teacher-grid img {
+        width: 290px;
+        height: 290px;
+    }
+
     .countdown {
         flex-wrap: wrap;
-        justify-content: center;
+        max-width: 240px;
+        gap: 15px;
     }
-    
+
     .countdown-item {
-        width: 80px;
-        height: 80px;
-        font-size: 0.9em;
-    }
-    
-    .students {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-    .student-card {
-        width: 200px;
-    }
-
-    h1 {
-        font-size: 2.8em;
-    }
-
-    h2 {
-        font-size: 2.2em;
-    }
-
-    h3 {
-        font-size: 1.3em;
-    }
-
-    .student-card img,
-    .teacher-grid img {
-        height: 200px;
-    }
-    
-    .student-card {
-        width: 200px;
-    }
-
-    .student-card h3,
-    .teacher-grid h3 {
-        font-size: 1em;
-        font-family: 'Lexend', sans-serif;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-    .gallery-item {
-        height: 200px;
+        width: 100px;
+        height: 100px;
+        margin: 0;
     }
 }
 </style>
@@ -362,8 +375,8 @@ footer {
 <body>
 
 <div class="header">
-    <h1>Promoción 2024</h1>
-    <h2>"Sueños y Logros"</h2>
+    <h2>Graduación 2024</h2>
+    <h1>"Sueños y Logros"</h1>
     <div class="countdown">
         <div class="countdown-item">
             <div id="days">00</div>
@@ -443,7 +456,66 @@ footer {
 <section id="students">
     <h2>Nuestros Graduados</h2>
     <div class="students">
-        <!-- Generado dinámicamente con JavaScript -->
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Ana García">
+            <h3>Ana García</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Carlos López">
+            <h3>Carlos López</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="María Rodríguez">
+            <h3>María Rodríguez</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Juan Pérez">
+            <h3>Juan Pérez</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Laura Martínez">
+            <h3>Laura Martínez</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Pedro Sánchez">
+            <h3>Pedro Sánchez</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Sofia Torres">
+            <h3>Sofia Torres</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Diego Ramírez">
+            <h3>Diego Ramírez</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Valentina Flores">
+            <h3>Valentina Flores</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Lucas González">
+            <h3>Lucas González</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Isabella Castro">
+            <h3>Isabella Castro</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Mateo Díaz">
+            <h3>Mateo Díaz</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Camila Vargas">
+            <h3>Camila Vargas</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Santiago Herrera">
+            <h3>Santiago Herrera</h3>
+        </div>
+        <div class="student-card">
+            <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Emma Ruiz">
+            <h3>Emma Ruiz</h3>
+        </div>
     </div>
 </section>
 
@@ -459,7 +531,26 @@ footer {
 <section class="teachers">
     <h2>Plantel Docente</h2>
     <div class="teacher-grid">
-        <!-- Generado dinámicamente con JavaScript -->
+        <div>
+            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dra. Carmen Vega">
+            <h3>Dra. Carmen Vega</h3>
+            <p>Directora</p>
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dra. Patricia Luna">
+            <h3>Dra. Patricia Luna</h3>
+            <p>Vice-Directora</p>
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Prof. Roberto Méndez">
+            <h3>Prof. Roberto Méndez</h3>
+            <p>Tutor</p>
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Prof. Andrea Silva">
+            <h3>Prof. Andrea Silva</h3>
+            <p>Tutora</p>
+        </div>
     </div>
 </section>
 
@@ -489,7 +580,33 @@ footer {
 </div>
 
 <section class="gallery">
-    <!-- Content will be dynamically generated by JavaScript -->
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 1">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/7942549/pexels-photo-7942549.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 2">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 3">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905441/pexels-photo-5905441.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 4">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905469/pexels-photo-5905469.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 5">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 6">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 7">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 8">
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5905439/pexels-photo-5905439.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Foto de graduación 9">
+    </div>
 </section>
 
 <div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
@@ -502,7 +619,7 @@ footer {
 </div>
 
 <footer>
-    <p style="color: #F2F2DF;">Diseñado por <a href="https://malelemdz.com" style="color: #F2C063; text-decoration: none;">Malelemdz</a> © 2024</p>
+    <p style="color: #F2F2DF; font-size: 0.8em; font-weight: 300;">Diseñado por <a href="https://malelemdz.com" target="_blank" rel="noopener noreferrer" style="color: #F2C063; text-decoration: none; font-weight: 300;">Malelemdz</a> © 2024</p>
 </footer>
 
 <script>

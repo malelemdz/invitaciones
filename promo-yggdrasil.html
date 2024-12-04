@@ -19,6 +19,7 @@ body {
 
 .header {
     height: 100vh;
+    padding: 20px;  /* Add padding to prevent elements from touching edges */
     background: linear-gradient(rgba(20, 26, 64, 0.8), rgba(242, 192, 99, 0.8)), 
                 url('https://images.pexels.com/photos/7972727/pexels-photo-7972727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
@@ -43,14 +44,14 @@ body {
 
 .header h2 {
     font-family: 'Dancing Script', cursive;  
-    margin-bottom: 20px;
-    color: white;
     font-size: 2.8em;
+    margin-bottom: 30px; /* Increase spacing between title and logo */
+    color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .header-logo {
-    max-width: 300px;  /* Change from current value to 300px */
+    max-width: 200px;  /* Change from current value to 300px */
     width: 80%;
     height: auto;
     margin: 20px 0;
@@ -341,44 +342,54 @@ footer a {
 
 @media (max-width: 768px) {
     .header {
-        background-attachment: scroll;
-        background-position: center center;
-        background-repeat: no-repeat;
+        padding: 40px 20px; /* Increase vertical padding */
     }
     
-    .student-card {
-        width: 320px;
+    .header h2 {
+        font-size: 2.2em; /* Smaller font size on mobile */
+        margin-bottom: 20px;
     }
-    
-    .student-card img {
-        width: 290px;
-        height: 290px;
-    }
-    
-    .teacher-grid div {
-        width: 320px;
-    }
-    
-    .teacher-grid img {
-        width: 290px;
-        height: 290px;
+
+    .header-logo {
+        max-width: 150px;
+        margin: 20px 0 30px 0; /* Adjust margins around logo */
     }
 
     .countdown {
         flex-wrap: wrap;
         max-width: 240px;
-        gap: 15px;
+        gap: 10px;
+        margin: 0 auto; /* Center the countdown */
     }
 
     .countdown-item {
-        width: 100px;
-        height: 100px;
-        margin: 0;
+        width: 80px; /* Make countdown items slightly smaller */
+        height: 80px;
+        padding: 10px;
+    }
+
+    .countdown-item div {
+        font-size: 1.3em; /* Adjust font size for numbers */
+    }
+
+    .countdown-item small {
+        font-size: 0.8em; /* Adjust font size for labels */
+    }
+}
+
+/* Add styles for even smaller screens */
+@media (max-width: 360px) {
+    .header h2 {
+        font-size: 1.8em;
     }
 
     .header-logo {
-        max-width: 250px;  /* Change from current value to 250px */
-        margin: 15px 0;
+        max-width: 120px;
+    }
+
+    .countdown-item {
+        width: 70px;
+        height: 70px;
     }
 }
 </style>
@@ -389,7 +400,7 @@ footer a {
 
 <div class="header">
     <h2>Graduación 2024</h2>
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo.png?raw=true" alt="Sueños y Logros" class="header-logo">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo.png?raw=true" alt="Logo" class="header-logo">
     <div class="countdown">
         <div class="countdown-item">
             <div id="days">00</div>

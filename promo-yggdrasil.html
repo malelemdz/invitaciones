@@ -19,9 +19,9 @@ body {
 
 .header {
     height: 100vh;
-    padding: 20px;  /* Add padding to prevent elements from touching edges */
+    padding: 20px;  
     background: linear-gradient(rgba(20, 26, 64, 0.8), rgba(242, 192, 99, 0.8)), 
-                url('https://images.pexels.com/photos/7972727/pexels-photo-7972727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                url('https://images.pexels.com/photos/8093033/pexels-photo-8093033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -35,34 +35,40 @@ body {
 }
 
 .header h1 {
-    font-family: 'Dancing Script', cursive;  
-    margin-bottom: 20px;
+    font-family: 'Lexend', sans-serif;  
+    margin-bottom: 10px; /* Reduced margin to accommodate subtitle */
     color: white;
     font-size: 3.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.header h2 {
-    font-family: 'Dancing Script', cursive;  
-    font-size: 2.8em;
-    margin-bottom: 30px; /* Increase spacing between title and logo */
+/* Updated header subtitle style */
+.header .subtitle {
+    font-family: 'Lexend', sans-serif;  /* Changed from 'Dancing Script' to 'Lexend' */
     color: white;
+    font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
 }
 
 .header-logo {
-    max-width: 200px;  /* Change from current value to 300px */
+    max-width: 200px;
     width: 80%;
     height: auto;
-    margin: 20px 0;
-    filter: brightness(0) invert(1);
+    margin: 20px auto; 
+    filter: none;
 }
 
 section h2 {
     font-family: 'Dancing Script', cursive;
     margin-bottom: 20px;
     color: #141A40;
-    font-size: 2em;
+    font-size: 3em; /* Increased from 2em */
+}
+
+/* Add specific style for Invitación section to make it even larger */
+section:first-of-type h2 {
+    font-size: 4em; /* Special larger size for Invitación heading */
 }
 
 .program h2, .teachers h2, .gallery h2 {
@@ -81,8 +87,8 @@ section h2 {
 
 h3 {
     font-family: 'Lexend', sans-serif;  
-    margin-top: 10px; /* Updated margin-top */
-    margin-bottom: 0; /* Ensure no bottom margin */
+    margin-top: 10px; 
+    margin-bottom: 0; 
     color: #141A40;
     font-size: 1.2em;
     font-weight: 300;
@@ -95,6 +101,10 @@ p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+section:first-of-type p {
+    margin-bottom: 10px;
 }
 
 .countdown {
@@ -153,7 +163,11 @@ p {
 section {
     background: #F2F2DF !important;
     position: relative;
-    padding: 60px 20px;
+    padding: 60px 20px 20px 20px; /* Reduced bottom padding */
+}
+
+section.logo-section {
+    padding: 0;
 }
 
 .program, .gallery {
@@ -174,21 +188,11 @@ section {
     padding: 0 20px; 
 }
 
-.section-divider svg {
-    width: 100%;
+.section-divider img {
     height: 60px;
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-.graduation-icon {
-    fill: #141A40;
-    opacity: 0.1;
-    transform: scale(0.8);
-}
-
-.graduation-icon line {
-    stroke-width: 0.3;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .timeline div {
@@ -213,15 +217,15 @@ section {
 
 .location button {
     display: block;
-    margin: 30px auto; /* Increased top/bottom margin from 20px to 30px */
-    padding: 15px 30px; /* Increased padding from 10px 20px to 15px 30px */
+    margin: 30px auto; 
+    padding: 15px 30px; 
     font-family: 'Lexend', sans-serif;  
     background: #141A40;
     color: #F2F2DF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em; /* Added font-size to make text larger */
+    font-size: 1.1em; 
 }
 
 .students {
@@ -322,75 +326,87 @@ footer {
     background: #141A40;
     color: #F2C063;
     padding: 10px;
-    text-align: center; /* Add this line */
+    text-align: center; 
 }
 
 footer p {
     color: #F2F2DF;
     font-size: 0.8em;
     font-weight: 300;
-    margin: 5px auto; /* Change from margin: 5px 0 to margin: 5px auto */
-    text-align: center; /* Add this line */
+    margin: 5px auto; 
+    text-align: center; 
 }
 
 footer a {
     color: #F2C063;
     text-decoration: none;
     font-weight: 300;
-    text-align: center; /* Add this line */
+    text-align: center; 
 }
 
 @media (max-width: 768px) {
     .header {
-        padding: 40px 20px; /* Increase vertical padding */
+        padding: 40px 20px; 
     }
     
-    .header h2 {
-        font-size: 2.2em; /* Smaller font size on mobile */
-        margin-bottom: 20px;
+    .header h1 {
+        font-size: 2.5em; /* Reduced from 3.5em */
+        white-space: nowrap; /* Forces text to stay on one line */
+    }
+    
+    /* Adjust subtitle size to maintain proportions */
+    .header .subtitle {
+        font-size: 2em;
     }
 
     .header-logo {
         max-width: 150px;
-        margin: 20px 0 30px 0; /* Adjust margins around logo */
+        margin: 20px auto; 
     }
 
     .countdown {
         flex-wrap: wrap;
         max-width: 240px;
         gap: 10px;
-        margin: 0 auto; /* Center the countdown */
+        margin: 0 auto; 
     }
 
     .countdown-item {
-        width: 80px; /* Make countdown items slightly smaller */
+        width: 80px; 
         height: 80px;
         padding: 10px;
     }
 
     .countdown-item div {
-        font-size: 1.3em; /* Adjust font size for numbers */
+        font-size: 1.3em; 
     }
 
     .countdown-item small {
-        font-size: 0.8em; /* Adjust font size for labels */
+        font-size: 0.8em; 
     }
 }
 
-/* Add styles for even smaller screens */
 @media (max-width: 360px) {
-    .header h2 {
-        font-size: 1.8em;
+    .header h1 {
+        font-size: 2em; /* Even smaller for very small screens */
+    }
+    
+    .header .subtitle {
+        font-size: 1.5em;
     }
 
     .header-logo {
         max-width: 120px;
     }
+}
 
-    .countdown-item {
-        width: 70px;
-        height: 70px;
-    }
+.location h3 {
+    font-family: 'Lexend', sans-serif;  
+    margin-top: 10px; 
+    margin-bottom: 30px; /* Increased from default to add more space */
+    color: #141A40;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -399,8 +415,8 @@ footer a {
 <body>
 
 <div class="header">
-    <h2>Graduación 2024</h2>
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo.png?raw=true" alt="Logo" class="header-logo">
+    <h1>Graduación 2024</h1>
+    <div class="subtitle">YGGDRASIL</div>
     <div class="countdown">
         <div class="countdown-item">
             <div id="days">00</div>
@@ -426,17 +442,16 @@ footer a {
 </div>
 
 <section>
-    <h2>Te invitamos a nuestra Graduación</h2>
-    <p>Con gran alegría y orgullo, la Promoción 2024 "YGGDRASIL" del Unidad Educativa "Héroes del Boquerón", te invita a compartir uno de los momentos más importantes de nuestras vidas. Acompáñanos en esta celebración especial el día miércoles 11 de noviembre a las 18:30 donde daremos un paso más hacia nuestro futuro.</p>
+    <h2>Invitación</h2>
+    <p>La Dirección, Personal Docente, Administrativo, Padres de Familia y Estudiantes de la Promoción 2024 «YGGDRASIL», tienen el agrado de invitar a Ud.(s) al solemne acto de Graduación de Bachilleres a efectuarse el día viernes 11 de diciembre a horas 18:30 en el Salón de Eventos del Colegio Médico (calle España entre México y Mayor Rocha)</p>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<section class="logo-section">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo-promo.png?raw=true" alt="Logo" class="header-logo" style="display: block; margin: 0 auto;">
+</section>
+
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section class="program">
@@ -450,31 +465,21 @@ footer a {
     </div>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section class="location">
     <h2>Ubicación</h2>
-    <h3>Salón Real Events</h3>
-    <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Salón de eventos">
-    <button onclick="window.location.href='https://maps.google.com'">
+    <h3>Salón de Eventos del Colegio Médico</h3>
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/salon.jpg?raw=true" alt="Salón de Eventos">
+    <button onclick="window.location.href='https://maps.app.goo.gl/cnJgaHaGsb8P2ac59'">
         <i class="fas fa-map-marker-alt"></i> Ver ubicación
     </button>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section id="students">
@@ -498,7 +503,7 @@ footer a {
         </div>
       <div class="student-card">
             <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/michelle.jpg?raw=true" alt="Michelle Camacho">
-            <h3>Camacho Vargas Michelle</h3>
+            <h3>Camacho Vargas Mishell Natalia</h3>
         </div>
         <div class="student-card">
             <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/pedro.jpg?raw=true" alt="Pedro Diaz">
@@ -555,13 +560,8 @@ footer a {
     </div>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section class="teachers">
@@ -590,13 +590,8 @@ footer a {
     </div>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section>
@@ -606,13 +601,8 @@ footer a {
     <p>A nuestros padres, por su amor incondicional, su apoyo constante y por creer en nosotros incluso cuando nosotros dudábamos. Sin ustedes, nada de esto sería posible.</p>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <section class="gallery">
@@ -624,6 +614,9 @@ footer a {
     </div>
     <div class="gallery-item">
         <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0101.jpg?raw=true" alt="Foto de graduación 3">
+    </div>
+    <div class="gallery-item">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0102.jpg?raw=true" alt="Foto de graduación 4">
     </div>
     <div class="gallery-item">
         <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0105.jpg?raw=true" alt="Foto de graduación 5">
@@ -640,27 +633,10 @@ footer a {
     <div class="gallery-item">
         <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0116.jpg?raw=true" alt="Foto de graduación 9">
     </div>
-   <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0117.jpg?raw=true">
-    </div>
-   <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0118.jpg?raw=true" alt="Foto de graduación 11">
-    </div>
-   <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0119.jpg?raw=true" alt="Foto de graduación 12">
-    </div>
-   <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0121.jpg?raw=true" alt="Foto de graduación 13">
-    </div>
 </section>
 
-<div class="section-divider" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 1200px;">
-    <svg viewBox="0 0 100 20" style="width: 100%; max-width: 800px;">
-        <path d="M45,10 L55,10 L55,8 L50,3 L45,8 Z M47,10 L53,10 L50,12 Z M49,3 L51,3 L50,1 Z M48.5,3.5 C48.5,4.5 51.5,4.5 51.5,3.5" fill="#141A40" opacity="0.2" stroke="#141A40" stroke-width="0.1"></path>
-        <path d="M48,12 L52,12 L50,14 Z" fill="#141A40" opacity="0.1" stroke="#141A40" stroke-width="0.1"></path>
-        <line x1="0" y1="10" x2="40" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-        <line x1="60" y1="10" x2="100" y2="10" stroke="#141A40" stroke-width="0.1"></line>
-    </svg>
+<div class="section-divider">
+    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
 </div>
 
 <footer>
@@ -687,6 +663,29 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
+// Galería
+const galleryPhotos = [
+    'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/7942549/pexels-photo-7942549.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905441/pexels-photo-5905441.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905469/pexels-photo-5905469.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905439/pexels-photo-5905439.jpeg?auto=compress&cs=tinysrgb&w=800'
+];
+
+const gallery = document.querySelector('.gallery');
+galleryPhotos.forEach((photo, index) => {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `
+        <img src="${photo}" alt="Foto de graduación ${index + 1}">
+    `;
+    gallery.appendChild(div);
+});
 
 // Música
 let audio = new Audio('https://example.com/graduation-song.mp3');

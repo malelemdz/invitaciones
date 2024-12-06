@@ -1,705 +1,866 @@
-<html><head><base href="https://github.com/malelemdz">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graduación 2024</title>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lexend', sans-serif;  
-    text-align: center;
-}
-
-body {
-    background: #F2F2DF;
-    color: #141A40;
-    line-height: 1.6;
-}
-
-.header {
-    height: 100vh;
-    padding: 20px;  
-    background: linear-gradient(rgba(20, 26, 64, 0.8), rgba(242, 192, 99, 0.8)), 
-                url('https://images.pexels.com/photos/8093033/pexels-photo-8093033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-.header h1 {
-    font-family: 'Lexend', sans-serif;  
-    margin-bottom: 10px; /* Reduced margin to accommodate subtitle */
-    color: white;
-    font-size: 3.5em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Updated header subtitle style */
-.header .subtitle {
-    font-family: 'Lexend', sans-serif;  /* Changed from 'Dancing Script' to 'Lexend' */
-    color: white;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    margin-bottom: 20px;
-}
-
-.header-logo {
-    max-width: 200px;
-    width: 80%;
-    height: auto;
-    margin: 20px auto; 
-    filter: none;
-}
-
-section h2 {
-    font-family: 'Dancing Script', cursive;
-    margin-bottom: 20px;
-    color: #141A40;
-    font-size: 3em; /* Increased from 2em */
-}
-
-/* Add specific style for Invitación section to make it even larger */
-section:first-of-type h2 {
-    font-size: 4em; /* Special larger size for Invitación heading */
-}
-
-.program h2, .teachers h2, .gallery h2 {
-    font-family: 'Dancing Script', cursive;
-    margin-bottom: 20px;
-    color: #141A40;
-    font-size: 2em;
-}
-
-.location h2 {
-    font-family: 'Dancing Script', cursive;
-    margin-bottom: 20px;
-    color: #141A40;
-    font-size: 2em;
-}
-
-h3 {
-    font-family: 'Lexend', sans-serif;  
-    margin-top: 10px; 
-    margin-bottom: 0; 
-    color: #141A40;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-p {
-    font-family: 'Lexend', sans-serif;  
-    margin: 15px 20px;
-    color: #141A40;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section:first-of-type p {
-    margin-bottom: 10px;
-}
-
-.countdown {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    justify-content: center;
-    flex-wrap: nowrap;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.countdown-item {
-    background: #F2F2DF;
-    padding: 15px;
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.countdown-item div {
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: 'Lexend', sans-serif;  
-    color: #141A40;
-}
-
-.countdown-item small {
-    margin-top: 5px;
-    font-family: 'Lexend', sans-serif;  
-    color: #141A40;
-}
-
-.music-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #F2C063;
-    color: #141A40;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 1000;
-}
-
-section {
-    background: #F2F2DF !important;
-    position: relative;
-    padding: 60px 20px 20px 20px; /* Reduced bottom padding */
-}
-
-section.logo-section {
-    padding: 0;
-}
-
-.program, .gallery {
-    background: #F2F2DF !important;
-}
-
-.section-divider {
-    height: 80px;
-    width: 100%;
-    max-width: 1200px; 
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #F2F2DF;
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
-
-.section-divider img {
-    height: 60px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.timeline div {
-    margin: 15px 0;
-    font-family: 'Lexend', sans-serif;  
-}
-
-.location {
-    text-align: center;
-    background: #fff;
-}
-
-.location img {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 800px;
-    height: 500px;
-    max-width: 90vw;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.location button {
-    display: block;
-    margin: 30px auto; 
-    padding: 15px 30px; 
-    font-family: 'Lexend', sans-serif;  
-    background: #141A40;
-    color: #F2F2DF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em; 
-}
-
-.students {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.student-card {
-    width: 250px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.student-card img {
-    width: 220px; 
-    height: 220px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.teacher-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-    justify-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.teacher-grid div {
-    width: 250px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.teacher-grid img {
-    width: 220px; 
-    height: 220px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.teacher-grid p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #666;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-    background: #F2F2DF !important;
-}
-
-.gallery-item {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-footer {
-    background: #141A40;
-    color: #F2C063;
-    padding: 10px;
-    text-align: center; 
-}
-
-footer p {
-    color: #F2F2DF;
-    font-size: 0.8em;
-    font-weight: 300;
-    margin: 5px auto; 
-    text-align: center; 
-}
-
-footer a {
-    color: #F2C063;
-    text-decoration: none;
-    font-weight: 300;
-    text-align: center; 
-}
-
-@media (max-width: 768px) {
+<html lang="es"><head><base href="https://malelemdz.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://github.com/malelemdz/invitaciones/blob/main/source/promo-ico.png?raw=true">
+    <title>YGGDRASIL 2024</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lexend', sans-serif;  
+        text-align: center;
+    }
+    
+    body {
+        background: #F2F2DF;
+        color: #141A40;
+        line-height: 1.6;
+    }
+    
     .header {
-        padding: 40px 20px; 
+        height: 100vh;
+        padding: 20px;  
+        background: linear-gradient(rgba(20, 26, 64, 0.8), rgba(242, 192, 99, 0.8)), 
+                    url('https://images.pexels.com/photos/8093033/pexels-photo-8093033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        position: relative;
     }
     
     .header h1 {
-        font-size: 2.5em; /* Reduced from 3.5em */
-        white-space: nowrap; /* Forces text to stay on one line */
+        font-family: 'Lexend', sans-serif;  
+        margin-bottom: 10px; /* Reduced margin to accommodate subtitle */
+        color: white;
+        font-size: 3.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
-    /* Adjust subtitle size to maintain proportions */
+    /* Updated header subtitle style */
     .header .subtitle {
-        font-size: 2em;
+        font-family: 'Lexend', sans-serif;  /* Changed from 'Dancing Script' to 'Lexend' */
+        color: white;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        margin-bottom: 20px;
     }
-
+    
     .header-logo {
-        max-width: 150px;
+        max-width: 200px;
+        width: 80%;
+        height: auto;
         margin: 20px auto; 
+        filter: none;
     }
-
+    
+    section h2 {
+        font-family: 'Dancing Script', cursive;
+        margin-bottom: 20px;
+        color: #141A40;
+        font-size: 3em; /* Reduced from 4em to 3em */
+    }
+    
+    h3 {
+        font-family: 'Lexend', sans-serif;  
+        margin-top: 10px; 
+        margin-bottom: 0; 
+        color: #141A40;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+    
+    p {
+        font-family: 'Lexend', sans-serif;  
+        margin: 15px 20px;
+        color: #141A40;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    section:first-of-type p {
+        margin-bottom: 10px;
+    }
+    
     .countdown {
-        flex-wrap: wrap;
-        max-width: 240px;
-        gap: 10px;
-        margin: 0 auto; 
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-
+    
     .countdown-item {
-        width: 80px; 
-        height: 80px;
-        padding: 10px;
+        background: #F2F2DF;
+        padding: 15px;
+        border-radius: 10px;
+        width: 120px; /* Increased from 100px */
+        height: 120px; /* Increased from 100px */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
+    
     .countdown-item div {
-        font-size: 1.3em; 
+        font-size: 2em; /* Increased from 1.5em */
+        font-weight: bold;
+        font-family: 'Lexend', sans-serif;  
+        color: #141A40;
     }
-
+    
     .countdown-item small {
-        font-size: 0.8em; 
-    }
-}
-
-@media (max-width: 360px) {
-    .header h1 {
-        font-size: 2em; /* Even smaller for very small screens */
+        margin-top: 5px;
+        font-family: 'Lexend', sans-serif;  
+        color: #141A40;
+        font-size: 1.1em; /* Increased from default */
     }
     
-    .header .subtitle {
-        font-size: 1.5em;
+    .music-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #e0b123;
+        color: #141A40;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        cursor: pointer;
+        z-index: 1000;
+        animation: pulse 2s infinite;
     }
-
-    .header-logo {
-        max-width: 120px;
-    }
-}
-
-.location h3 {
-    font-family: 'Lexend', sans-serif;  
-    margin-top: 10px; 
-    margin-bottom: 30px; /* Increased from default to add more space */
-    color: #141A40;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="header">
-    <h1>Graduación 2024</h1>
-    <div class="subtitle">YGGDRASIL</div>
-    <div class="countdown">
-        <div class="countdown-item">
-            <div id="days">00</div>
-            <small>Días</small>
-        </div>
-        <div class="countdown-item">
-            <div id="hours">00</div>
-            <small>Horas</small>
-        </div>
-        <div class="countdown-item">
-            <div id="minutes">00</div>
-            <small>Minutos</small>
-        </div>
-        <div class="countdown-item">
-            <div id="seconds">00</div>
-            <small>Segundos</small>
-        </div>
-    </div>
-</div>
-
-<div class="music-btn" id="musicBtn">
-    <i class="fas fa-music"></i>
-</div>
-
-<section>
-    <h2>Invitación</h2>
-    <p>La Dirección, Personal Docente, Administrativo, Padres de Familia y Estudiantes de la Promoción 2024 «YGGDRASIL», tienen el agrado de invitar a Ud.(s) al solemne acto de Graduación de Bachilleres a efectuarse el día viernes 11 de diciembre a horas 18:30 en el Salón de Eventos del Colegio Médico (calle España entre México y Mayor Rocha)</p>
-</section>
-
-<section class="logo-section">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo-promo.png?raw=true" alt="Logo" class="header-logo" style="display: block; margin: 0 auto;">
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section class="program">
-    <h2>Programa del Acto</h2>
-    <div class="timeline">
-        <div>10:00 - Recepción de invitados</div>
-        <div>10:30 - Ingreso de graduados</div>
-        <div>11:00 - Ceremonia de graduación</div>
-        <div>12:30 - Entrega de diplomas</div>
-        <div>13:30 - Brindis y celebración</div>
-    </div>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section class="location">
-    <h2>Ubicación</h2>
-    <h3>Salón de Eventos del Colegio Médico</h3>
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/salon.jpg?raw=true" alt="Salón de Eventos">
-    <button onclick="window.location.href='https://maps.app.goo.gl/cnJgaHaGsb8P2ac59'">
-        <i class="fas fa-map-marker-alt"></i> Ver ubicación
-    </button>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section id="students">
-    <h2>Nuestros Graduados</h2>
-    <div class="students">
-      <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/santi_flores.jpg?raw=true" alt="Santiago Flores">
-            <h3>Flores Santiago Atipaj</h3>
-        </div>  
-      <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/melisa.jpg?raw=true" alt="Melisa Ayala">
-            <h3>Ayala Coca Melisa Edmé</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/cristian.jpg?raw=true" alt="Cristian Barao">
-            <h3>Barao Veliz Cristian Rolando</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/alejandro.jpg?raw=true" alt="Alejandro Calizaya">
-            <h3>Calizaya Rodríguez Alejandro David</h3>
-        </div>
-      <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/michelle.jpg?raw=true" alt="Michelle Camacho">
-            <h3>Camacho Vargas Mishell Natalia</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/pedro.jpg?raw=true" alt="Pedro Diaz">
-            <h3>Diaz Villamil Sidorchenko Pedro</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/bayron.jpg?raw=true" alt="Bayron Lara">
-            <h3>Lara Soriagalvarro Bayron Raily</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/adriana.jpg?raw=true" alt="Adriana Ledezma">
-            <h3>Ledezma Aruchari Adriana</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/rodrigo_lobo.jpg?raw=true" alt="Rodrigo Lobo">
-            <h3>Lobo Torrico Gabriel Rodrigo</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/aylin.jpg?raw=true" alt="Aylin Moreno">
-            <h3>Moreno Mercado Aylin Jhadira</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/elmer.jpg?raw=true" alt="Eloy Pacheco">
-            <h3>Pacheco Machaca Elmer Eloy</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/victor.jpg?raw=true" alt="Victor Roca">
-            <h3>Roca Guillen Victor Orlando</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/gabriel.jpg?raw=true" alt="Gabriel Román">
-            <h3>Román Torrico Gabriel Castell</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://images.pexels.com/photos/2880979/pexels-photo-2880979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Lucas Saucedo">
-            <h3>Saucedo Román Lucas</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/fernanado.jpg?raw=true" alt="Edwin Siles">
-            <h3>Siles Quisbert Fernando Edwin</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/santi_torrico.jpg?raw=true" alt="Santiago Torrico">
-            <h3>Torrico Gárate Santiango</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/rodrigo.jpg?raw=true" alt="Rodrigo Ustariz">
-            <h3>Ustariz Balderrama Rodrigo</h3>
-        </div>
-        <div class="student-card">
-            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/miguel.jpg?raw=true" alt="Miguel Uzeda">
-            <h3>Uzeda Rivas Miguel Angel</h3>
-        </div>
-    </div>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section class="teachers">
-    <h2>Plantel Docente</h2>
-    <div class="teacher-grid">
-        <div>
-            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dra. Carmen Vega">
-            <h3>Dra. Carmen Vega</h3>
-            <p>Directora</p>
-        </div>
-        <div>
-            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dra. Patricia Luna">
-            <h3>Dra. Patricia Luna</h3>
-            <p>Vice-Directora</p>
-        </div>
-        <div>
-            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Prof. Roberto Méndez">
-            <h3>Prof. Roberto Méndez</h3>
-            <p>Tutor</p>
-        </div>
-        <div>
-            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Prof. Andrea Silva">
-            <h3>Prof. Andrea Silva</h3>
-            <p>Tutora</p>
-        </div>
-    </div>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section>
-    <h2>Agradecimientos</h2>
-    <p>A nuestro querido colegio, que durante estos años nos ha brindado no solo conocimientos sino también valores y principios que llevaremos siempre con nosotros.</p>
-    <p>A nuestros docentes, por su dedicación, paciencia y por guiarnos en cada paso de este camino, siendo luz en momentos de dudas y apoyo en momentos de dificultad.</p>
-    <p>A nuestros padres, por su amor incondicional, su apoyo constante y por creer en nosotros incluso cuando nosotros dudábamos. Sin ustedes, nada de esto sería posible.</p>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<section class="gallery">
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0090.jpg?raw=true" alt="Foto de graduación 1">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0097.jpg?raw=true" alt="Foto de graduación 2">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0101.jpg?raw=true" alt="Foto de graduación 3">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0102.jpg?raw=true" alt="Foto de graduación 4">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0105.jpg?raw=true" alt="Foto de graduación 5">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0107.jpg?raw=true" alt="Foto de graduación 6">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0111.jpg?raw=true" alt="Foto de graduación 7">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0113.jpg?raw=true" alt="Foto de graduación 8">
-    </div>
-    <div class="gallery-item">
-        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0116.jpg?raw=true" alt="Foto de graduación 9">
-    </div>
-</section>
-
-<div class="section-divider">
-    <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
-</div>
-
-<footer>
-    <p style="color: #F2F2DF; font-size: 0.8em; font-weight: 300;">Diseñado por <a href="https://malelemdz.com" target="_blank" rel="noopener noreferrer" style="color: #F2C063; text-decoration: none; font-weight: 300;">Malelemdz</a> © 2024</p>
-</footer>
-
-<script>
-// Cuenta regresiva
-const graduationDate = new Date('2024-12-11T18:30:00').getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = graduationDate - now;
     
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
-    document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
-}
-
-setInterval(updateCountdown, 1000);
-
-// Galería
-const galleryPhotos = [
-    'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/7942549/pexels-photo-7942549.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905498/pexels-photo-5905498.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905441/pexels-photo-5905441.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905469/pexels-photo-5905469.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/5905439/pexels-photo-5905439.jpeg?auto=compress&cs=tinysrgb&w=800'
-];
-
-const gallery = document.querySelector('.gallery');
-galleryPhotos.forEach((photo, index) => {
-    const div = document.createElement('div');
-    div.className = 'gallery-item';
-    div.innerHTML = `
-        <img src="${photo}" alt="Foto de graduación ${index + 1}">
-    `;
-    gallery.appendChild(div);
-});
-
-// Música
-let audio = new Audio('https://example.com/graduation-song.mp3');
-let isPlaying = false;
-
-document.getElementById('musicBtn').addEventListener('click', () => {
-    if (isPlaying) {
-        audio.pause();
-        isPlaying = false;
-    } else {
-        audio.play();
-        isPlaying = true;
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-});
-</script>
+    
+    section {
+        background: #F2F2DF !important;
+        position: relative;
+        padding: 60px 20px 20px 20px; /* Reduced bottom padding */
+    }
+    
+    section.logo-section {
+        padding: 0;
+    }
+    
+    .program, .gallery {
+        background: #F2F2DF !important;
+    }
+    
+    .section-divider {
+        height: 80px;
+        width: 100%;
+        max-width: 1200px; 
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F2F2DF;
+        margin: 0 auto; 
+        padding: 0 20px; 
+    }
+    
+    .section-divider img {
+        height: 60px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    
+    .timeline {
+        text-align: left;  
+        max-width: 800px; /* Changed from 1000px to 800px to match invitation width */
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .timeline ol {
+        text-align: left; /* Explicitly set left alignment for ordered list */
+    }
 
-</body></html>
+    .timeline li {
+        text-align: left; /* Explicitly set left alignment for list items */
+    }
+    
+    .location {
+        text-align: center;
+        background: #fff;
+    }
+    
+    .location img {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .location button {
+        display: block;
+        margin: 30px auto; 
+        padding: 15px 30px; 
+        font-family: 'Lexend', sans-serif;  
+        background: #141A40;
+        color: #F2F2DF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em; 
+    }
+    
+    .students {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 20px;
+        justify-items: center;
+    }
+    
+    .student-card {
+        width: 250px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .student-card img {
+        width: 220px; 
+        height: 220px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+    .teacher-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .teacher-grid div {
+        width: 250px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .teacher-grid img {
+        width: 220px; 
+        height: 220px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+    .teacher-grid p {
+        margin: 5px 0;
+        font-size: 0.9em;
+        color: #666;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        justify-items: center;
+        background: #F2F2DF !important;
+    }
+    
+    .gallery-item {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    footer {
+        background: #141A40;
+        color: #F2C063;
+        padding: 10px;
+        text-align: center; 
+    }
+    
+    footer p {
+        color: #F2F2DF;
+        font-size: 0.8em;
+        font-weight: 300;
+        margin: 5px auto; 
+        text-align: center; 
+    }
+    
+    footer a {
+        color: #F2C063;
+        text-decoration: none;
+        font-weight: 300;
+        text-align: center; 
+    }
+    
+    .students-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: left;
+    }
+    
+    .students-list li {
+        padding: 10px 0; /* Adjust padding now that bullet is removed */
+    }
+    
+    .students-list li::before {
+        display: none; /* Remove the star bullet point */
+    }
+    
+    .alumnos.destacados.primaria h3 {
+        font-family: 'Lexend', sans-serif;  
+        margin-top: 10px; 
+        margin-bottom: 30px;
+        color: #141A40;
+        font-size: 1.2em;
+        font-weight: 700; /* Changed from 300 to 700 to make it bold */
+    }
+    
+    @media (max-width: 768px) {
+        .header {
+            padding: 40px 20px; 
+        }
+        
+        .header h1 {
+            font-size: 2.5em; /* Reduced from 3.5em */
+            white-space: nowrap; /* Forces text to stay on one line */
+        }
+        
+        /* Adjust subtitle size to maintain proportions */
+        .header .subtitle {
+            font-size: 2em;
+        }
+    
+        .header-logo {
+            max-width: 150px;
+            margin: 20px auto; 
+        }
+    
+        .countdown {
+            flex-wrap: wrap;
+            max-width: 280px; /* Increased from 240px */
+            gap: 10px;
+            margin: 0 auto; 
+        }
+    
+        .countdown-item {
+            width: 100px; /* Increased from 80px */
+            height: 100px; /* Increased from 80px */
+            padding: 10px;
+        }
+    
+        .countdown-item div {
+            font-size: 1.6em; /* Increased from 1.3em */
+        }
+    
+        .countdown-item small {
+            font-size: 0.9em; /* Increased from 0.8em */
+        }
+    
+        .timeline div {
+            font-size: 1em;
+            padding-left: 35px;
+        }
+        section h2 {
+            font-size: 2.5em; /* Adjust size for mobile screens */
+        }
+
+        .location img {
+            max-width: 90vw;
+            aspect-ratio: 4/3;
+        }
+
+        /* Updated student card styles for mobile */
+        .students {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased from 250px */
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .student-card {
+            width: 300px; /* Increased from 250px */
+            padding: 20px; /* Increased padding */
+        }
+
+        .student-card img {
+            width: 260px; /* Increased from 220px */
+            height: 260px; /* Increased from 220px */
+        }
+
+        .student-card h3 {
+            font-size: 1.3em; /* Increased font size */
+            margin-top: 15px;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .header h1 {
+            font-size: 2em; /* Even smaller for very small screens */
+        }
+        
+        .header .subtitle {
+            font-size: 1.5em;
+        }
+    
+        .header-logo {
+            max-width: 120px;
+        }
+
+        .students {
+            grid-template-columns: 1fr; /* Single column */
+            padding: 5px;
+        }
+
+        .student-card {
+            width: 100%; /* Full width */
+            max-width: 320px; /* Maximum width */
+            margin: 0 auto;
+        }
+
+        .student-card img {
+            width: calc(100% - 20px); /* Responsive image width */
+            height: auto;
+            aspect-ratio: 1/1; /* Maintain square ratio */
+        }
+    }
+    
+    .location h3 {
+        font-family: 'Lexend', sans-serif;  
+        margin-top: 10px; 
+        margin-bottom: 30px; /* Increased from default to add more space */
+        color: #141A40;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <div class="header">
+        <h1>Graduación 2024</h1>
+        <div class="subtitle">YGGDRASIL</div>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div id="days">00</div>
+                <small>Días</small>
+            </div>
+            <div class="countdown-item">
+                <div id="hours">00</div>
+                <small>Horas</small>
+            </div>
+            <div class="countdown-item">
+                <div id="minutes">00</div>
+                <small>Minutos</small>
+            </div>
+            <div class="countdown-item">
+                <div id="seconds">00</div>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="music-btn" id="musicBtn">
+        <i class="fas fa-music"></i>
+    </div>
+    
+    <section>
+        <h2>Invitación</h2>
+        <p>La Dirección, Personal Docente, Administrativo, Padres de Familia y Estudiantes de la Promoción 2024 «YGGDRASIL», tienen el agrado de invitar a Ud.(s) al solemne acto de Graduación de Bachilleres a efectuarse el día viernes 11 de diciembre a horas 18:30 en el Salón de Eventos del Colegio Médico (calle España entre México y Mayor Rocha)</p>
+    </section>
+    
+    <section class="logo-section">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo-promo.png?raw=true" alt="Logo" class="header-logo" style="display: block; margin: 0 auto;">
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+    
+    <section class="location">
+        <h2>Ubicación</h2>
+        <h3>Salón de Eventos del Colegio Médico <br> 18:30 horas</h3>
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/salon.jpg?raw=true" alt="Salón de Eventos">
+        <button onclick="window.location.href='https://maps.app.goo.gl/cnJgaHaGsb8P2ac59'">
+            <i class="fas fa-map-marker-alt"></i> Ver ubicación
+        </button>
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+    
+    <section class="program">
+        <h2>Programa</h2>
+        <div class="timeline" style="counter-reset: timeline-counter">
+            <ol style="list-style-type: decimal; text-align: left; max-width: 800px; margin: 0 auto; padding: 0 20px;">
+                <li style="margin: 20px 0; padding-left: 10px;">Ingreso de Símbolos Patrios, Plantel Docente y Administrativo</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Ingreso de Bachilleres</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Himno Nacional, Coro General</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Certificados a Niños de Nivel Inicial por cambio de Ciclo</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Reconocimientos estímulo a estudiantes Destacados en Ámbitos: Socio Cultural, Académico y Deportivo</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Certificados de Excelencia Académica</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Certificados a los Bachilleres de la Promoción 2024</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Incentivo a Bachilleres Destacados (Ministerio de Educación) a: Melisa Edmé Ayala Coca y Rodrigo Ustariz Balderrama</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Palabras a cargo del representante de la Pre-Promoción, estudiante: Oscar Delgadillo Saravia</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Entrega de Mosaico de la Promoción a cargo de: Adriana Ledezma y Rodrigo Ustariz</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Palabras a cargo del representante de los Bachilleres: Bario Veliz Cristian Ronaldo</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Traspaso del estandarte a cargo de Melisa Ayala Coca a Vanessa Ramallo Zabala</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Palabras a cargo de los Asesores de la Promoción</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Palabras a cargo de la Dirección del Establecimiento</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Número Musical a Cargo de los Estudiantes de la Promoción</li>
+                <li style="margin: 20px 0; padding-left: 10px;">Desconcentración y Ofrendas Florales</li>
+            </ol>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+    
+    <section class="alumnos destacados primaria">
+        <h2>Alumnos destacados <br> Gestión 2024</h2><br>
+        <h3 style="margin-bottom: 30px;">PRIMARIA</h3>
+        <ul class="students-list">
+            <li>Castro Caleb Sebastián</li>
+            <li>Rodríguez Guzmán Josué Ricardo</li>
+            <li>Terrazas Dávila Kiara Stephanie</li>
+            <li>García Rocha Alejandro</li>
+            <li>Mamani Pineda Eliel Matías</li>
+            <li>Arce Rocha Cesar Thiago</li>
+            <li>Gómez Arequipa Ariana Michelle</li>
+            <li>Ledezma Mendoza Dasha Lorena</li>
+            <li>Velasco Russel Drako Nathaniel</li>
+            <li>Maes Maes Charlotte Kaya</li>
+            <li>Calisaya Bravo Fernanda Nicole</li>
+        </ul><br>
+        <h3 style="margin-bottom: 30px;">SECUNDARIA</h3>
+        <ul class="students-list">
+            <li>García Fernández Leonel Álvaro</li>
+            <li>Muruá Saavedra Gabriel Leonel </li>
+            <li>Salazar Ledezma Iris Guadalupe</li>
+            <li>Vázquez De La Barra Wara Abril Aleyda</li>
+            <li>Aguirre Chávez Aarón</li>
+            <li>Maes Maes Raphael</li>
+            <li>Torrico Santa Cruz Luis Santiago</li>
+            <li>Ugarte Valencia Alexander</li>
+            <li>Barao Veliz Cristian Ronaldo</li>
+            <li>Ustariz Balderrama Rodrigo</li>
+            <li>Rodríguez Vásquez Valeria</li>
+            <li>Terrazas Dávila Leonardo</li>
+        </ul><br>
+        <h3 style="margin-bottom: 30px;">DIPLOMMAS DE EXCELENCIA <br> ACADÉMICA: PRIMARIA</h3>
+        <ul class="students-list">
+            <li>Delgadillo Guzmán Danieli Kazuya</li>
+            <li>Sandoval Mamani Alicia</li>
+            <li>García Rocha Alejandro</li>
+            <li>Zubieta Quispe Ian Daniel</li>
+            <li>Delgadillo Saravia Ignacio Martín</li>
+            <li>Ramallo Zabala Josué</li>
+            <li>Gómez Arequipa Ariana Michelle</li>
+            <li>Mejía Montenegro Irina</li>
+            <li>Velasco Russel Drako Nathaniel</li>
+            <li>Terrazas Dávila Kiara Stephanie</li>
+            <li>Ledesma Mendoza Diego Andrés</li>
+            <li>Ledesma Mendoza Dasha Lorena</li>
+        </ul><br>
+        <h3 style="margin-bottom: 30px;">DIPLOMMAS DE EXCELENCIA <br> ACADÉMICA: SECUNDARIA</h3>
+        <ul class="students-list">
+            <li>Rodríguez Vásquez Valeria</li>
+            <li>Ramallo Zabala Vanessa</li>
+            <li>García Rocha Saúl Andrés</li>
+            <li>Delgadillo Saravia Oscar Santiago</li>
+            <li>Rodríguez Guzmán Lucía Sara</li>
+            <li>Ayala Coca Melisa Edmé</li>
+            <li>Terrazas Dávila Leonardo</li>
+            <li>Vásquez De La Barra Wara Abril Aleyda</li>
+            <li>Pinto Herrera Alison Nayra</li>
+            <li>Cabezas Ponce Wara</li>
+            <li>Sarmiento Quisbert Rafael Santiago</li>
+        </ul><br>
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+    
+    <section id="students">
+        <h2>Nuestros Graduados</h2>
+        <div class="students">
+          <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/santi_flores.jpg?raw=true" alt="Santiago Flores">
+                <h3>Flores Santiago Atipaj</h3>
+            </div>  
+          <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/melisa.jpg?raw=true" alt="Melisa Ayala">
+                <h3>Ayala Coca Melisa Edmé</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/cristian.jpg?raw=true" alt="Cristian Barao">
+                <h3>Barao Veliz Cristian Rolando</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/alejandro.jpg?raw=true" alt="Alejandro Calizaya">
+                <h3>Calizaya Rodríguez Alejandro David</h3>
+            </div>
+          <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/michelle.jpg?raw=true" alt="Michelle Camacho">
+                <h3>Camacho Vargas Mishell Natalia</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/pedro.jpg?raw=true" alt="Pedro Diaz">
+                <h3>Diaz Villamil Sidorchenko Pedro</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/bayron.jpg?raw=true" alt="Bayron Lara">
+                <h3>Lara Soriagalvarro Bayron Raily</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/adriana.jpg?raw=true" alt="Adriana Ledezma">
+                <h3>Ledezma Aruchari Adriana</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/rodrigo_lobo.jpg?raw=true" alt="Rodrigo Lobo">
+                <h3>Lobo Torrico Gabriel Rodrigo</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/aylin.jpg?raw=true" alt="Aylin Moreno">
+                <h3>Moreno Mercado Aylin Jhadira</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/elmer.jpg?raw=true" alt="Eloy Pacheco">
+                <h3>Pacheco Machaca Elmer Eloy</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/victor.jpg?raw=true" alt="Victor Roca">
+                <h3>Roca Guillen Victor Orlando</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/gabriel.jpg?raw=true" alt="Gabriel Román">
+                <h3>Román Torrico Gabriel Castell</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/lucas.jpg?raw=true" alt="Lucas Saucedo">
+                <h3>Saucedo Román Lucas</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/fernanado.jpg?raw=true" alt="Edwin Siles">
+                <h3>Siles Quisbert Fernando Edwin</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/santi_torrico.jpg?raw=true" alt="Santiago Torrico">
+                <h3>Torrico Gárate Santiango</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/rodrigo.jpg?raw=true" alt="Rodrigo Ustariz">
+                <h3>Ustariz Balderrama Rodrigo</h3>
+            </div>
+            <div class="student-card">
+                <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/miguel.jpg?raw=true" alt="Miguel Uzeda">
+                <h3>Uzeda Rivas Miguel Angel</h3>
+            </div>
+        </div>
+    </section>
+      
+    <section class="teachers">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/logo-hb.png?raw=true" 
+             alt="Logo HB" 
+             style="max-width: 200px; 
+                    width: 80%;
+                    height: auto;
+                    margin: 20px auto;
+                    display: block;">
+        <br><br>
+        <h2>Plantel Docente</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px;">
+            <h3 style="font-weight: bold; margin-bottom: 20px;">DIRECTORES (AS)</h3>
+            <p style="margin-bottom: 10px;">Lic. Elizabeth Cadima Revollo – Directora General</p>
+            <p style="margin-bottom: 30px;">Lic. Tania D.I. Vázquez Vargas – Directora Académica</p>
+            
+            <h3 style="font-weight: bold; margin-bottom: 20px;">ASESORES</h3>
+            <p style="margin-bottom: 10px;">Jilka O. Guzmán Flores</p>
+            <p style="margin-bottom: 10px;">Rodrigo G. Velásquez Oros</p>
+            <p style="margin-bottom: 10px;">Mauricio F. Mérida Zubieta</p>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+    
+    <section>
+        <h2>Agradecimientos</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px;">
+            <h3 style="font-weight: bold; margin-bottom: 20px;">A DIOS:</h3>
+            <p>Por el regalo divino de estar vivos, por ser un guía incansable de nuestros pasos y por la bendición de ser parte de esta inolvidable experiencia.</p>
+
+            <h3 style="font-weight: bold; margin-bottom: 20px;">A NUESTROS PADRES:</h3>
+            <p>Por darnos desinteresadamente amor y comprensión, por haber sido un apoyo incondicional en los momentos difíciles y por ser fieles compañeros en el camino de nuestras vidas.</p>
+
+            <h3 style="font-weight: bold; margin-bottom: 20px;">A NUESTROS PROFESORES:</h3>
+            <p>Que nos formaron con sabiduría y libertad, moldearon nuestra personalidad y nos guiaron por la senda del saber. Cada uno de nuestros años estudiantiles quedará grabado en nuestro corazón y lo recordaremos con gratitud.</p>
+
+            <h3 style="font-weight: bold; margin-bottom: 20px;">A LOS BACHILLERES:</h3>
+            <p>Por la amistad cultivada a lo largo de estos años y por todo lo que hemos logrado juntos y que aquellos lazos de cariño y amor perdure para siempre en nuestros corazones.</p>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/separador.png?raw=true" alt="Separador">
+    </div>
+
+    <br>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0090.jpg?raw=true" alt="Foto de graduación 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0097.jpg?raw=true" alt="Foto de graduación 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0101.jpg?raw=true" alt="Foto de graduación 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0105.jpg?raw=true" alt="Foto de graduación 4">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0107.jpg?raw=true" alt="Foto de graduación 5">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0111.jpg?raw=true" alt="Foto de graduación 6">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0113.jpg?raw=true" alt="Foto de graduación 7">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0116.jpg?raw=true" alt="Foto de graduación 8">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0117.jpg?raw=true" alt="Foto de graduación 9">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0118.jpg?raw=true" alt="Foto de graduación 10">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0119.jpg?raw=true" alt="Foto de graduación 11">
+        </div>
+        <div class="gallery-item">
+            <img src="https://github.com/malelemdz/invitaciones/blob/main/source/promo%20yggdrasil/galeria/IMG_0121.jpg?raw=true" alt="Foto de graduación 12">
+        </div>
+    </section>
+     <div class="section-divider">
+</div>
+    <div>
+</div>
+    
+    <footer>
+        <p style="color: #F2F2DF; font-size: 0.8em; font-weight: 300;">Diseñado por <a href="https://malelemdz.com" target="_blank" rel="noopener noreferrer" style="color: #F2C063; text-decoration: none; font-weight: 300;">Malelemdz</a> © 2024</p>
+    </footer>
+    
+    <script>
+    // Cuenta regresiva
+    const graduationDate = new Date('2024-12-11T18:30:00').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = graduationDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+        document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+    }
+    
+    setInterval(updateCountdown, 1000);
+    
+    // Música
+    let audio = new Audio('https://github.com/malelemdz/invitaciones/raw/refs/heads/main/source/promo%20yggdrasil/Somewhere%20Over%20the%20Rainbow%202011.mp3');
+    let isPlaying = false;
+    
+    document.getElementById('musicBtn').addEventListener('click', () => {
+        const musicBtn = document.getElementById('musicBtn');
+        const musicIcon = musicBtn.querySelector('i');
+        
+        if (isPlaying) {
+            audio.pause();
+            isPlaying = false;
+            musicBtn.classList.remove('playing');
+            musicIcon.classList.remove('fa-pause');
+            musicIcon.classList.add('fa-music');
+        } else {
+            audio.play();
+            isPlaying = true;
+            musicBtn.classList.add('playing');
+            musicIcon.classList.remove('fa-music');
+            musicIcon.classList.add('fa-pause');
+        }
+    });
+    </script>
+    
+    </body></html>
